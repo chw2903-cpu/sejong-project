@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>마크로젠 세종시 3대 전략사업 마스터플랜</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body { font-family: 'Pretendard', -apple-system, sans-serif; background-color: #f8fafc; color: #0f172a; }
+.chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 350px; max-height: 400px; }
+@media (min-width: 768px) { .chart-container { height: 400px; } }
+.step-item { transition: all 0.3s ease; }
+.step-item:hover { transform: translateY(-2px); }
+.accordion-content { transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out; max-height: 0; overflow: hidden; }
+.accordion-content.open { max-height: 500px; padding-top: 1rem; padding-bottom: 1rem; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn 0.3s ease-out forwards; }
+</style>
+</head>
+<body class="antialiased">
+
+<nav class="bg-blue-800 text-white sticky top-0 z-50 shadow-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<span class="font-bold text-xl tracking-wider">MACROGEN <span class="text-blue-300 font-light">SC BD</span></span>
+</div>
+<div class="hidden md:block">
+<div class="ml-10 flex items-baseline space-x-4">
+<a href="#dashboard" class="hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors">대시보드</a>
+<a href="#projects" class="hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors">사업 로드맵</a>
+<a href="#strategy" class="hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors">방어 전략</a>
+</div>
+</div>
+</div>
+</div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+<header class="mb-10 border-b border-slate-200 pb-6">
+<div class="flex justify-between items-end">
+<div>
+<h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-2">세종시 3대 전략사업 마스터플랜</h1>
+<p class="text-lg text-slate-600">SC사업개발실 최종 종합 보고 및 경영진 의사결정 지원서</p>
+</div>
+<div class="text-right hidden sm:block">
+<p class="text-sm font-semibold text-slate-500">업데이트</p>
+<p class="text-lg font-bold text-blue-800">2026. 03. 05</p>
+</div>
+</div>
+<div class="mt-6 bg-red-50 border-l-4 border-red-500 p-4 rounded-r-md shadow-sm">
+<h2 class="text-red-800 font-bold text-lg mb-1">📌 핵심 정정 및 지시사항: '규제특구'의 정확한 이해</h2>
+<p class="text-sm text-red-900 font-medium leading-relaxed">
+세종DTC 사업은 단순한 임시 허가 성격의 '규제샌드박스'가 아닙니다. 이는 법적으로 지정된 구역 내에서 항구적인 산업 생태계를 조성하는 <strong>'규제특구(Regulatory Special Zone)'</strong> 사업입니다. 경영진 및 대외 보고 시 이 용어를 엄격히 구분하여, 마크로젠의 세종센터가 갖는 <strong>영구적인 법률적, 지리적 해자(Moat)</strong>임을 명확히 강조하시기 바랍니다.
+</p>
+</div>
+</header>
+
+<section id="dashboard" class="mb-16">
+<div class="mb-6">
+<h2 class="text-2xl font-bold text-slate-800">사업 포트폴리오 요약</h2>
+<p class="text-slate-600 mt-1">마크로젠의 수직계열화(실증 데이터 확보 - AI 인프라 연동 - 대규모 검체 파이프라인)를 완성하는 세종시 3대 핵심 사업의 현재 위치입니다. 각 카드는 사업의 성격과 현안을 요약합니다.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white rounded-xl shadow-md border-t-4 border-amber-500 p-6 flex flex-col h-full hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<span class="inline-flex items-center justify-center px-2.5 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800">3단계 진행중</span>
+<span class="text-2xl" aria-hidden="true">🔬</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">① 세종DTC 사업</h3>
+<p class="text-sm text-amber-600 font-bold mb-3">트랙: 규제특구 실증사업</p>
+<p class="text-slate-600 text-sm flex-grow">유전체 기반 맞춤형 건강관리 실증. 복지부 규제를 돌파하여 데이터의 공익적 가치를 증명하고 영구적 B2B/B2C 시장을 창출합니다.</p>
+<div class="mt-4 pt-4 border-t border-slate-100">
+<p class="text-xs font-bold text-slate-500">당면 과제</p>
+<p class="text-sm font-bold text-slate-800 mt-1">3/17 복지부 분과위 대응</p>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md border-t-4 border-blue-600 p-6 flex flex-col h-full hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<span class="inline-flex items-center justify-center px-2.5 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800">2단계 진행중</span>
+<span class="text-2xl" aria-hidden="true">💻</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">② 세종임상/AI 플랫폼</h3>
+<p class="text-sm text-blue-600 font-bold mb-3">트랙: 대형 R&D (600억)</p>
+<p class="text-slate-600 text-sm flex-grow">지놈파운드리 독점 운영. KAIST를 주관으로 내세워 행정 부담을 최소화하고 '위탁'을 통한 순수 영업이익 극대화를 추진합니다.</p>
+<div class="mt-4 pt-4 border-t border-slate-100">
+<p class="text-xs font-bold text-slate-500">당면 과제</p>
+<p class="text-sm font-bold text-slate-800 mt-1">위탁 매출화용 RFP 설계</p>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md border-t-4 border-emerald-500 p-6 flex flex-col h-full hover:shadow-lg transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<span class="inline-flex items-center justify-center px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">1단계 진행중</span>
+<span class="text-2xl" aria-hidden="true">🏥</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">③ 세종암치료센터</h3>
+<p class="text-sm text-emerald-600 font-bold mb-3">트랙: 인프라 구축 (5,000억)</p>
+<p class="text-slate-600 text-sm flex-grow">중입자가속기 연계 진헬스 분원 설립. 전국 단위 고부가가치 암 환자 유전체 검체를 독점적으로 확보하기 위한 앵커 시설입니다.</p>
+<div class="mt-4 pt-4 border-t border-slate-100">
+<p class="text-xs font-bold text-slate-500">당면 과제</p>
+<p class="text-sm font-bold text-slate-800 mt-1">분석 독점 MOA 기획</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="projects" class="mb-16">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-slate-800">사업별 5단계 추진 로드맵 및 상세 현황</h2>
+<p class="text-slate-600 mt-2">각 사업은 성격에 따라 전혀 다른 행정 프로세스를 거칩니다. 아래의 <strong>각 단계를 클릭</strong>하여 해당 시점의 핵심 역할(R&R)과 현재 마크로젠이 마주한 병목(Bottleneck) 상황을 상세히 확인하십시오.</p>
+</div>
+<div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-slate-200">
+<div class="bg-slate-50 border-b border-slate-200 p-6">
+<div class="flex justify-between items-center mb-2">
+<h3 class="text-xl font-bold text-amber-700">① 세종DTC 사업: 규제특구 실증 로드맵</h3>
+<span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full">현재 위치: 3단계</span>
+</div>
+<p class="text-sm text-slate-700 font-medium">단순 샌드박스가 아닌 '규제특구'로서 세종시 내 영구적 거점을 마련하는 지리적/법적 해자 구축 과정입니다.</p>
+</div>
+<div class="p-6">
+<div class="flex flex-col md:flex-row justify-between mb-8 relative" id="stepper-p1"></div>
+<div id="detail-p1" class="bg-slate-50 p-5 rounded-lg border border-slate-200 min-h-[120px]"></div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md overflow-hidden mb-8 border border-slate-200">
+<div class="bg-slate-50 border-b border-slate-200 p-6">
+<div class="flex justify-between items-center mb-2">
+<h3 class="text-xl font-bold text-blue-700">② 세종임상/AI 플랫폼: 대형 R&D 로드맵</h3>
+<span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">현재 위치: 2단계</span>
+</div>
+<p class="text-sm text-slate-700 font-medium">행정은 KAIST에, 실질적 수익은 마크로젠의 '지놈파운드리 위탁 매출'로 귀속시키는 치밀한 수익 구조화 과정입니다.</p>
+</div>
+<div class="p-6">
+<div class="flex flex-col md:flex-row justify-between mb-8 relative" id="stepper-p2"></div>
+<div id="detail-p2" class="bg-slate-50 p-5 rounded-lg border border-slate-200 min-h-[120px]"></div>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200">
+<div class="bg-slate-50 border-b border-slate-200 p-6">
+<div class="flex justify-between items-center mb-2">
+<h3 class="text-xl font-bold text-emerald-700">③ 세종암치료센터: SOC 인프라 로드맵</h3>
+<span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">현재 위치: 1단계</span>
+</div>
+<p class="text-sm text-slate-700 font-medium">세종 진헬스 분원 설립을 미끼로, 향후 수십 년간 발생할 고부가가치 암 검체 분석권을 독점하는 장기 프로젝트입니다.</p>
+</div>
+<div class="p-6">
+<div class="flex flex-col md:flex-row justify-between mb-8 relative" id="stepper-p3"></div>
+<div id="detail-p3" class="bg-slate-50 p-5 rounded-lg border border-slate-200 min-h-[120px]"></div>
+</div>
+</div>
+</section>
+
+<section id="strategy" class="mb-16">
+<div class="mb-8">
+<h2 class="text-2xl font-bold text-slate-800">참여 확정의 근거 및 경영진 방어 전략</h2>
+<p class="text-slate-600 mt-2">이사회 및 대표이사의 "왜 우리가 확정적인가?", "수익성은 보장되는가?"라는 질문에 대한 실무진의 객관적 데이터와 철저한 논리적 방어 체계입니다. 아래 차트와 Q&A를 통해 마크로젠의 압도적 우위를 확인하십시오.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-white rounded-xl shadow-md border border-slate-200 p-6">
+<h3 class="text-lg font-bold text-slate-900 text-center mb-2">마크로젠 경쟁우위 다차원 분석 (The Moat)</h3>
+<p class="text-xs text-center text-slate-500 mb-6">수치가 100에 가까울수록 경쟁사 대비 당사의 시장 진입장벽이 완벽히 구축되었음을 의미합니다. 차트에 마우스를 올려 세부 항목을 확인하십시오.</p>
+<div class="chart-container">
+<canvas id="moatChart"></canvas>
+</div>
+<div class="mt-6 bg-blue-50 p-4 rounded-lg text-sm text-blue-900 space-y-2">
+<p><span class="font-bold">✓ 지리적 독점:</span> 세종센터 보유로 지자체 사업 참여 필수 요건 단독 충족.</p>
+<p><span class="font-bold">✓ 거버넌스:</span> 세종시 미래산업과와 초기부터 RFP를 당사에 유리하게 공동 설계.</p>
+<p><span class="font-bold">✓ 데이터 락인:</span> AI 플랫폼 연동을 통한 타사 분석 엔진의 진입 원천 차단.</p>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-md border border-slate-200 p-6 flex flex-col">
+<h3 class="text-lg font-bold text-slate-900 mb-6 flex items-center">
+<span class="mr-2 text-xl" aria-hidden="true">🛡️</span> 경영진 Q&A 및 대응 논리
+</h3>
+<div class="flex-grow flex flex-col space-y-3" id="faq-container"></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="bg-slate-900 text-slate-400 py-8 text-center">
+<div class="max-w-7xl mx-auto px-4">
+<p class="text-sm font-medium">© 2026 Macrogen SC Business Development Team. Confidential Executive Report.</p>
+<p class="text-xs mt-2 opacity-75">본 문서는 세종시 지자체 사업 추진을 위한 내부 전략 자산입니다.</p>
+</div>
+</footer>
+
+<script>
+const projectData = {
+p1: {
+color: 'amber',
+currentStep: 3,
+steps: [
+{ num: 1, name: "아이디어 기획", title: "건강관리 모델 수립", status: "완료", detail: "세종시 특화 유전체 데이터 기반 건강관리 모델 수립. 마크로젠이 기획 주도." },
+{ num: 2, name: "특구 지정 신청", title: "중기부 공식 신청", status: "완료", detail: "세종시가 중기부에 '규제특구 계획' 공식 제출 완료." },
+{ num: 3, name: "부처 협의", title: "규제 특례 조정 (병목)", status: "진행중", detail: "<strong class='text-amber-700 text-lg'>[현재 위치] 3/17 복지부 분과위 대응.</strong> 복지부 불수용 의견에 맞서, 단순 샌드박스가 아닌 '규제특구'로서의 실증 데이터 공익성과 필수성을 증명할 논리 전개 중." },
+{ num: 4, name: "최종 의결", title: "특구위원회 의결", status: "대기", detail: "국무총리 주재 규제특구위원회 최종 지정 및 국비 예산 확정." },
+{ num: 5, name: "사업 발주", title: "실증 사업 개시", status: "대기", detail: "세종테크노파크 공고 발주. 기획자 프리미엄으로 당사 컨소시엄 선정 확실." }
+]
+},
+p2: {
+color: 'blue',
+currentStep: 2,
+steps: [
+{ num: 1, name: "마스터플랜 수립", title: "AI 플랫폼 기획", status: "완료", detail: "KAIST와 공동으로 AI 정밀의료 플랫폼 구축 마스터플랜 수립." },
+{ num: 2, name: "타당성 검토", title: "예산 증액 설계", status: "진행중", detail: "<strong class='text-blue-700 text-lg'>[현재 위치] 600억 예산 Scale-up 기획.</strong> 과기부 대상 2차 예산 증액 기획 중. 당사의 지놈파운드리 이용료를 고수익 매출로 전환하기 위한 특수 RFP(제안요청서) 설계 단계." },
+{ num: 3, name: "정부 심의", title: "R&D 및 예산 심의", status: "대기", detail: "과기부 심의 및 기재부 예산 타당성 검토 통과 대응." },
+{ num: 4, name: "예산 편성", title: "정부 예산안 반영", status: "대기", detail: "국회 통과를 통한 세종시 정밀의료 핵심 예산 최종 확보." },
+{ num: 5, name: "협약 및 발주", title: "위탁 계약 체결", status: "대기", detail: "KAIST(주관)-마크로젠(위탁) 계약 체결을 통해 실질적인 매출화 개시." }
+]
+},
+p3: {
+color: 'emerald',
+currentStep: 1,
+steps: [
+{ num: 1, name: "수요조사/기획", title: "기본 기획 및 부지 제안", status: "진행중", detail: "<strong class='text-emerald-700 text-lg'>[현재 위치] 진헬스 분원 설립 기획.</strong> 세종시 5-2생활권 부지 제안 수령. 암센터의 막대한 검체를 마크로젠이 독점 분석하도록 '공식 지정 유전체 분석 랩' 조항을 기획서에 삽입 중." },
+{ num: 2, name: "예타 대응", title: "예비타당성 조사", status: "대기", detail: "기재부(KDI) 경제성 분석 대응. 세종시 주도 진행." },
+{ num: 3, name: "부지/인허가", title: "행정 절차 진행", status: "대기", detail: "행복청 부지 매입 및 도시계획 변경 행정 절차." },
+{ num: 4, name: "모델 확정", title: "PPP 및 지분 확정", status: "대기", detail: "민관협력(PPP) 모델 확정. 진헬스 분원 설립 조건으로 '검체 독점 분석 MOA' 체결 예정." },
+{ num: 5, name: "착공 및 입점", title: "진헬스 정식 오픈", status: "대기", detail: "암센터 착공 및 진헬스 입점. 장기적인 검체 파이프라인 매출 가동." }
+]
+}
+};
+
+const faqData = [
+{ q: "2번 사업에서 왜 주관사를 포기하고 '위탁'으로 들어가는가?", a: "명분보다 <strong>실질적 영업이익(매출)</strong>을 취하기 위함입니다. 주관사는 막대한 행정 관리와 감사 부담을 지게 됩니다. 반면 위탁 구조 하에서는 우리의 인프라 이용 및 분석 알고리즘 사용료를 수익성 높은 '용역 매출'과 '기술 실시료'로 당당히 청구할 수 있습니다. 행정은 KAIST에 맡기고 실리는 우리가 챙기는 철저한 P&L 중심 전략입니다." },
+{ q: "DTC 사업에서 복지부가 검사 항목을 축소해도 추진할 가치가 있는가?", a: "가치가 매우 큽니다. 이 사업의 본질은 임시적인 샌드박스가 아닌, 특정 지역 기반의 <strong>'규제특구'</strong> 지위를 얻어내는 것입니다. 초기 항목 수가 줄더라도 이 합법적 테두리 안에서 누적된 실증 데이터는 향후 복지부를 압박하여 규제를 전면 해소할 무기가 되며, 건기식이나 보험과 연계된 2차 B2B 수익 모델의 핵심 자산이 됩니다." },
+{ q: "3번 암센터 연계 시 진헬스 분원 설립에 따른 CAPEX(자본적 지출) 회수 방안은?", a: "진헬스 분원의 목적은 단순 일반 검진 수익 창출이 아닙니다. 중입자 치료를 위해 전국에서 세종으로 모여들 <strong>막대한 양의 고부가가치 암 환자 유전체 검체</strong>를 당사의 분석 파이프라인으로 연결하는 거대한 '깔때기(Anchor)' 역할입니다. 당사의 높은 분석 마진율을 고려할 때, 쏟아지는 B2B 임상진단 매출로 CAPEX 회수 기간은 매우 짧을 것입니다." },
+{ q: "향후 사업 발주 시, 경쟁사나 대형 병원이 컨소시엄으로 가로챌 위험은?", a: "그 위험을 원천 차단했습니다. 지자체 사업 특성상 <strong>'관내 법인 및 시설(세종지놈센터)'</strong>을 보유한 당사가 지리적 독점을 지닙니다. 또한, 사업 초기 기획 단계부터 세종시와 공동으로 제안요청서(RFP)를 설계하여, '국가 공인 인증(CAP/CLIA)을 보유한 관내 기관'만이 분석을 위탁받을 수 있도록 기술적, 행정적 진입장벽을 이미 완성했습니다." }
+];
+
+function renderStepper(projectId, data) {
+const container = document.getElementById(`stepper-${projectId}`);
+const detailContainer = document.getElementById(`detail-${projectId}`);
+const cColor = data.color;
+
+const line = document.createElement('div');
+line.className = "hidden md:block absolute top-1/2 left-0 w-full h-1 bg-slate-200 -z-10 transform -translate-y-1/2 rounded";
+container.appendChild(line);
+
+const activeLine = document.createElement('div');
+const activeWidth = ((data.currentStep - 1) / (data.steps.length - 1)) * 100;
+activeLine.className = `hidden md:block absolute top-1/2 left-0 h-1 bg-${cColor}-500 -z-10 transform -translate-y-1/2 rounded transition-all duration-500`;
+activeLine.style.width = `${activeWidth}%`;
+container.appendChild(activeLine);
+
+data.steps.forEach((step, index) => {
+const isPast = step.num < data.currentStep;
+const isCurrent = step.num === data.currentStep;
+
+const stepDiv = document.createElement('div');
+stepDiv.className = "step-item relative flex flex-row md:flex-col items-center mb-4 md:mb-0 cursor-pointer group w-full md:w-1/5 z-10";
+
+let circleClass = "w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-colors duration-300 ";
+let textClass = "ml-4 md:ml-0 md:mt-3 text-sm font-semibold transition-colors duration-300 ";
+
+if (isPast) {
+circleClass += `bg-${cColor}-700 border-${cColor}-700 text-white`;
+textClass += "text-slate-600";
+} else if (isCurrent) {
+circleClass += `bg-${cColor}-500 border-${cColor}-500 text-white shadow-[0_0_15px_rgba(0,0,0,0.2)] ring-4 ring-${cColor}-200 scale-110`;
+textClass += `text-${cColor}-700 font-extrabold`;
+} else {
+circleClass += "bg-white border-slate-300 text-slate-400 group-hover:border-slate-500";
+textClass += "text-slate-400 group-hover:text-slate-600";
+}
+
+const mobileLine = `<div class="md:hidden absolute left-5 top-10 bottom-[-16px] w-0.5 ${isPast || (isCurrent && index !== data.steps.length-1) ? `bg-${cColor}-500` : 'bg-slate-200'} z-[-1]"></div>`;
+
+stepDiv.innerHTML = `
+${index !== data.steps.length - 1 ? mobileLine : ''}
+<div class="${circleClass}">${isPast ? '✓' : step.num}</div>
+<div class="${textClass} text-left md:text-center w-full">
+<p class="leading-tight text-base">${step.name}</p>
+<p class="text-xs font-normal opacity-75 mt-1">${step.status}</p>
+</div>
+`;
+
+stepDiv.addEventListener('click', () => {
+container.querySelectorAll('.step-item').forEach(el => el.style.opacity = '0.4');
+stepDiv.style.opacity = '1';
+detailContainer.innerHTML = `
+<div class="animate-fade-in border-l-4 border-${cColor}-500 pl-4 py-1">
+<h4 class="font-bold text-lg text-slate-900 mb-2">Step ${step.num}. ${step.title}</h4>
+<p class="text-slate-700 text-sm leading-relaxed">${step.detail}</p>
+</div>
+`;
+});
+
+container.appendChild(stepDiv);
+if(isCurrent) stepDiv.click();
+});
+}
+
+function renderFAQ() {
+const container = document.getElementById('faq-container');
+faqData.forEach((item, index) => {
+const div = document.createElement('div');
+div.className = "border border-slate-200 rounded-lg overflow-hidden bg-slate-50 shadow-sm";
+div.innerHTML = `
+<button class="w-full text-left px-5 py-4 bg-white hover:bg-slate-50 focus:outline-none flex justify-between items-center transition-colors">
+<span class="font-bold text-slate-800 pr-4">Q. ${item.q}</span>
+<span class="text-slate-400 font-bold text-xl transform transition-transform duration-200" id="icon-${index}">+</span>
+</button>
+<div class="accordion-content bg-slate-50 px-5 text-sm text-slate-700 border-t border-slate-200" id="content-${index}">
+<p class="leading-relaxed"><strong class="text-blue-800">A. 실무진 대응 논리:</strong><br><br>${item.a}</p>
+</div>
+`;
+
+const btn = div.querySelector('button');
+const content = div.querySelector('.accordion-content');
+const icon = div.querySelector('span:last-child');
+
+btn.addEventListener('click', () => {
+const isOpen = content.classList.contains('open');
+document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+document.querySelectorAll('button span:last-child').forEach(i => { i.innerText = '+'; i.style.transform = 'rotate(0deg)'; });
+
+if (!isOpen) {
+content.classList.add('open');
+icon.innerText = '−';
+icon.style.transform = 'rotate(180deg)';
+}
+});
+container.appendChild(div);
+});
+}
+
+function initChart() {
+const ctx = document.getElementById('moatChart').getContext('2d');
+Chart.defaults.font.family = "'Pretendard', sans-serif";
+
+const wrappedLabels = [
+['지리적 독점권', '(세종센터 보유)'],
+['민관 거버넌스', '(공동 기획자)'],
+['기술적 락인', '(독자 알고리즘)'],
+['데이터 파이프라인', '(암 검체 독점)'],
+['수익성 구조화', '(위탁 매출 전환)']
+];
+
+new Chart(ctx, {
+type: 'radar',
+data: {
+labels: wrappedLabels,
+datasets: [{
+label: '마크로젠 경쟁력 지수',
+data: [100, 95, 90, 85, 95],
+backgroundColor: 'rgba(30, 64, 175, 0.2)',
+borderColor: 'rgba(30, 64, 175, 1)',
+pointBackgroundColor: 'rgba(245, 158, 11, 1)',
+pointBorderColor: '#fff',
+pointHoverBackgroundColor: '#fff',
+pointHoverBorderColor: 'rgba(245, 158, 11, 1)',
+borderWidth: 2,
+},
+{
+label: '경쟁사(타 유전체 기업) 추정',
+data: [20, 30, 40, 10, 20],
+backgroundColor: 'rgba(148, 163, 184, 0.2)',
+borderColor: 'rgba(148, 163, 184, 1)',
+pointBackgroundColor: 'rgba(148, 163, 184, 1)',
+borderDash: [5, 5],
+borderWidth: 1,
+}]
+},
+options: {
+responsive: true,
+maintainAspectRatio: false,
+scales: {
+r: {
+angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+grid: { color: 'rgba(0, 0, 0, 0.1)' },
+pointLabels: { font: { size: 12, weight: 'bold' }, color: '#1e40af' },
+ticks: { display: false, min: 0, max: 100 }
+}
+},
+plugins: {
+legend: { position: 'bottom', labels: { boxWidth: 12, usePointStyle: true, font: { weight: 'bold' } } },
+tooltip: {
+backgroundColor: 'rgba(15, 23, 42, 0.9)',
+titleFont: { size: 13 },
+bodyFont: { size: 12 },
+padding: 10,
+callbacks: {
+title: function(tooltipItems) {
+const item = tooltipItems[0];
+let label = item.chart.data.labels[item.dataIndex];
+if (Array.isArray(label)) {
+return label.join(' ');
+} else {
+return label;
+}
+}
+}
+}
+}
+}
+});
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+renderStepper('p1', projectData.p1);
+renderStepper('p2', projectData.p2);
+renderStepper('p3', projectData.p3);
+renderFAQ();
+initChart();
+});
+</script>
+</body>
+</html>
